@@ -1,6 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
-
+import { Fragment, useEffect, useState } from "react";
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+import { IoMdMenu } from "react-icons/io";
 const Nav = () => {
     const navMenu = [
         {
@@ -61,6 +71,42 @@ const Nav = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [scrollPosition]);
+    const [state, setState] = useState({
+        top: false,
+        left: false,
+        bottom: false,
+        right: false,
+    });
+
+    const toggleDrawer = (anchor, open) => (event) => {
+        if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+            return;
+        }
+
+        setState({ ...state, [anchor]: open });
+    };
+
+    const list = (anchor) => (
+        <Box
+            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+            role="presentation"
+            onClick={toggleDrawer(anchor, false)}
+            onKeyDown={toggleDrawer(anchor, false)}
+        >
+            <List>
+                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+                    <ListItem key={text} disablePadding>
+                        <ListItemButton>
+                            <ListItemIcon>
+                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+                            </ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItemButton>
+                    </ListItem>
+                ))}
+            </List>
+        </Box>
+    )
     return (
         <div>
             <header
@@ -69,43 +115,52 @@ const Nav = () => {
             >
                 <div className="container flex items-center justify-between mx-auto px-6 py-4">
                     {/* Logo */}
-                    <a href="#" className="text-2xl font-bold">
-                        <img
-                            src="https://i.ibb.co/SKCQJM5/download.png"
-                            alt="Logo"
-                            className="w-32 h-32"
-                        />
-                    </a>
+                    <h1 className="text-white font-bold text-3xl">Pigeon</h1>
                     {/* Menu */}
                     <ul className="hidden md:flex space-x-10">
                         {navMenu.map((menu) => (
-                            <li key={menu.menuName}>
-                                <a
-                                    href="#"
-                                    className="hover:text-[#A28059] transition-all text-lg font-medium"
-                                >
+                            <li key={menu.menuName} className="group relative">
+                                <button className="text-white font-bold text-lg hover:text-[#AC8D68] transition-all ease-in-out">
                                     {menu.menuName}
-                                </a>
+                                </button>
+
+                                {/* Dropdown menu */}
+                                {/* <div className="absolute hidden group-hover:block bg-gray-100 min-w-[160px] shadow-md mt-1 rounded">
+
+                                </div> */}
+                                {/* Conditionally render dropdown for items other than "Home" */}
+                                {menu.menuName !== "Home" && (
+                                    <div className="absolute hidden group-hover:block bg-gray-100 min-w-[160px] shadow-md mt-1 rounded">
+                                        <a
+                                            href="#"
+                                            className="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-gray-900"
+                                        >
+                                            Link 1
+                                        </a>
+                                    </div>
+                                )}
                             </li>
                         ))}
                     </ul>
+
                     {/* Mobile Menu Icon */}
-                    <button className="block md:hidden text-white">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            className="w-8 h-8"
-                        >
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h16M4 18h16"
-                            />
-                        </svg>
-                    </button>
+                    <div className="2xl:hidden md:inline">
+                        {['left'].map((anchor) => (
+                            <Fragment key={anchor}>
+                                <Button onClick={toggleDrawer(anchor, true)}>
+                                    <IoMdMenu size={30} color="white"/>
+                                </Button>
+                                <Drawer
+                                    anchor={anchor}
+                                    open={state[anchor]}
+                                    onClose={toggleDrawer(anchor, false)}
+                                >
+                                    {list(anchor)}
+                                </Drawer>
+                            </Fragment>
+                        ))}
+                    </div>
+
                 </div>
             </header>
         </div>
