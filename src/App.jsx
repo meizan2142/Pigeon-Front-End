@@ -1,4 +1,5 @@
 import Hero from "./Components/Hero/Hero";
+import MissionVisionSection from "./Components/MissionVisionSection/MissionVisionSection";
 import Nav from "./Components/Nav/Nav";
 
 function App() {
@@ -9,6 +10,9 @@ function App() {
       </div>
       <div>
         <Hero/>
+      </div>
+      <div>
+        <MissionVisionSection/>
       </div>
     </div>
   )

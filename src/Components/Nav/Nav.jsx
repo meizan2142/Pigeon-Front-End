@@ -123,20 +123,18 @@ const Nav = () => {
                                 <button className="text-white font-bold text-lg hover:text-[#AC8D68] transition-all ease-in-out">
                                     {menu.menuName}
                                 </button>
-
-                                {/* Dropdown menu */}
-                                {/* <div className="absolute hidden group-hover:block bg-gray-100 min-w-[160px] shadow-md mt-1 rounded">
-
-                                </div> */}
-                                {/* Conditionally render dropdown for items other than "Home" */}
-                                {menu.menuName !== "Home" && (
+                                {/* Only show submenu if it's not "Home" and it has submenu items */}
+                                {menu.submenu.length > 0 && (
                                     <div className="absolute hidden group-hover:block bg-gray-100 min-w-[160px] shadow-md mt-1 rounded">
-                                        <a
-                                            href="#"
-                                            className="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-gray-900"
-                                        >
-                                            Link 1
-                                        </a>
+                                        {menu.submenu.map((sub, index) => (
+                                            <a
+                                                key={index}
+                                                href={sub.path} // Use the path from the submenu data
+                                                className="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-gray-900"
+                                            >
+                                                {sub.name}
+                                            </a>
+                                        ))}
                                     </div>
                                 )}
                             </li>
@@ -148,7 +146,7 @@ const Nav = () => {
                         {['left'].map((anchor) => (
                             <Fragment key={anchor}>
                                 <Button onClick={toggleDrawer(anchor, true)}>
-                                    <IoMdMenu size={30} color="white"/>
+                                    <IoMdMenu size={30} color="white" />
                                 </Button>
                                 <Drawer
                                     anchor={anchor}
