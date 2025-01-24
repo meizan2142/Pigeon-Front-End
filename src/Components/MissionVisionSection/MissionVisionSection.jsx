@@ -1,7 +1,7 @@
 const MissionVisionSection = () => {
     return (
         <section className="bg-white py-10 px-5 lg:py-20 lg:px-28 lg:mx-auto lg:w-[1200px]">
-            <div className="grid grid-cols-1 lg:grid-cols-2 lg:w-[1000px] gap-10 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 lg:w-[1200px] gap-10 items-center">
                 {/* Left Side: Image and Overlay */}
                 <div className="relative">
                     {/* Main Image */}
@@ -11,7 +11,7 @@ const MissionVisionSection = () => {
                         className="w-full h-auto rounded-lg"
                     />
                     {/* Overlay Content */}
-                    <div className="absolute top-10 left-10 lg:top-64 lg:left-0 bg-white shadow-md rounded-lg p-6 flex flex-col items-center w-[180px]">
+                    <div className="absolute top-10 left-10 lg:top-48 lg:left-0 bg-[#AC8D68] border-white border-4 shadow-md rounded-lg p-6 flex flex-col items-center w-[280px]">
                         {/* Circle Image */}
                         <div className="w-24 h-24 rounded-full overflow-hidden mb-4">
                             <img
@@ -20,13 +20,13 @@ const MissionVisionSection = () => {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <p className="text-lg font-semibold text-gray-600">Since</p>
-                        <p className="text-4xl font-bold text-gray-800">2003</p>
+                        <p className="text-lg font-semibold text-white">Since</p>
+                        <p className="text-5xl font-bold text-black">2003</p>
                     </div>
                 </div>
 
                 {/* Right Side: Text Content */}
-                <div className="text-center bg-[#F7F2EE] lg:text-left">
+                <div className="text-center bg-[#F7F2EE] lg:text-left rounded-lg h-[625px]">
                     <h2 className="text-2xl lg:text-4xl font-bold text-gray-800 mb-4 uppercase">
                         Mission and Vision
                     </h2>
