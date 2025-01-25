@@ -9,14 +9,14 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
 import { IoMdMenu } from "react-icons/io";
+
 const Nav = () => {
     const navMenu = [
         {
             menuName: "Home",
             path: "",
-            submenu: [], // No dropdown for Home
+            submenu: [],
         },
         {
             menuName: "BRPFC",
@@ -51,7 +51,7 @@ const Nav = () => {
             ],
         },
     ];
-    // const navMenu = ["Home", "About", "Services", "Contact"];
+
     const [scrollPosition, setScrollPosition] = useState(0);
     const [showNavbar, setShowNavbar] = useState(true);
 
@@ -71,6 +71,7 @@ const Nav = () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [scrollPosition]);
+
     const [state, setState] = useState({
         top: false,
         left: false,
@@ -82,7 +83,6 @@ const Nav = () => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
-
         setState({ ...state, [anchor]: open });
     };
 
@@ -94,19 +94,30 @@ const Nav = () => {
             onKeyDown={toggleDrawer(anchor, false)}
         >
             <List>
-                {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                    <ListItem key={text} disablePadding>
-                        <ListItemButton>
-                            <ListItemIcon>
-                                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                            </ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItemButton>
-                    </ListItem>
+                {navMenu.map((menu) => (
+                    <Fragment key={menu.menuName}>
+                        <ListItem disablePadding>
+                            <ListItemButton>
+                                <ListItemIcon>
+                                    <InboxIcon />
+                                </ListItemIcon>
+                                <ListItemText primary={menu.menuName} />
+                            </ListItemButton>
+                        </ListItem>
+                        {menu.submenu.length > 0 &&
+                            menu.submenu.map((sub, index) => (
+                                <ListItem key={index} disablePadding sx={{ pl: 4 }}>
+                                    <ListItemButton>
+                                        <ListItemText primary={sub.name} />
+                                    </ListItemButton>
+                                </ListItem>
+                            ))}
+                    </Fragment>
                 ))}
             </List>
         </Box>
-    )
+    );
+
     return (
         <div>
             <header
@@ -115,21 +126,22 @@ const Nav = () => {
             >
                 <div className="container flex items-center justify-between mx-auto px-6 py-4">
                     {/* Logo */}
-                    <h1 className="text-white font-bold text-3xl">Pigeon</h1>
+                    <h1 className="text-white font-bold text-xl mobile:text-lg lg:text-3xl">
+                        Pigeon
+                    </h1>
                     {/* Menu */}
-                    <ul className="hidden md:flex space-x-10">
+                    <ul className="hidden md:flex space-x-5 lg:space-x-10">
                         {navMenu.map((menu) => (
                             <li key={menu.menuName} className="group relative">
-                                <button className="text-white font-bold text-lg hover:text-[#AC8D68] transition-all ease-in-out">
+                                <button className="text-white font-medium text-sm lg:text-lg hover:text-[#AC8D68] transition-all ease-in-out">
                                     {menu.menuName}
                                 </button>
-                                {/* Only show submenu if it's not "Home" and it has submenu items */}
                                 {menu.submenu.length > 0 && (
                                     <div className="absolute hidden group-hover:block bg-gray-100 min-w-[160px] shadow-md mt-1 rounded">
                                         {menu.submenu.map((sub, index) => (
                                             <a
                                                 key={index}
-                                                href={sub.path} // Use the path from the submenu data
+                                                href={sub.path}
                                                 className="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-gray-900"
                                             >
                                                 {sub.name}
@@ -140,13 +152,12 @@ const Nav = () => {
                             </li>
                         ))}
                     </ul>
-
                     {/* Mobile Menu Icon */}
-                    <div className="2xl:hidden md:inline">
+                    <div className="md:hidden">
                         {['left'].map((anchor) => (
                             <Fragment key={anchor}>
                                 <Button onClick={toggleDrawer(anchor, true)}>
-                                    <IoMdMenu size={30} color="white" />
+                                    <IoMdMenu size={25} color="white" />
                                 </Button>
                                 <Drawer
                                     anchor={anchor}
@@ -158,11 +169,10 @@ const Nav = () => {
                             </Fragment>
                         ))}
                     </div>
-
                 </div>
             </header>
         </div>
-    )
-}
+    );
+};
 
-export default Nav
+export default Nav;
