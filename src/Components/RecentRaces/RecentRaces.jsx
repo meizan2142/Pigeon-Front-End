@@ -1,27 +1,103 @@
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay } from 'swiper/modules';
+
 const Testimonials = () => {
     return (
-        <section className="mt-24 bg-[#EFE7E0]">
-            <div className="max-w-6xl px-6 py-12 mx-auto">
-                <h1 className="text-black existingHeading text-4xl text-center font-bold pb-5">Testimonial</h1>
-
-                <main className="relative z-20 w-full mt-8 md:flex md:items-center xl:mt-12">
-                    <div className="absolute w-full bg-[#F7F2EE] -z-10 md:h-96 rounded-2xl"></div>
-
-                    <div className="w-full p-6  md:flex md:items-center rounded-2xl md:bg-transparent md:p-0 lg:px-12 md:justify-evenly">
-                        <img className="h-24 w-24 md:mx-6 rounded-full object-cover shadow-md md:h-[32rem] md:w-80 lg:h-[36rem] lg:w-[26rem] md:rounded-2xl" src="https://i.ibb.co.com/hmZHbgh/waist-up-portrait-handsome-serious-unshaven-male-keeps-hands-together-dressed-dark-blue-shirt-has-ta.jpg" alt="client photo" />
-
-                        <div className="mt-2 md:mx-6">
-                            <div>
-                                <p className="text-2xl font-medium tracking-tight text-black">Imran Azad</p>
-                                <p className="text-black "><i>President of BPRFC</i></p>
-                            </div>
-
-                            <p className="mt-4 text-lg leading-relaxed text-black md:text-xl">Dhaka, the capital city of Bangladesh where more then 30,000 pigeon fanciers of different categories. In the year of 2003 some of our pigeon fanciers have started to develop Racing Pigeon in Dhaka-Bangladesh.</p>
+        <div>
+            <Swiper
+                slidesPerView={1}
+                centeredSlides={false}
+                slidesPerGroupSkip={1}
+                loop={true} // Enables infinite autoplay
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                grabCursor={true}
+                keyboard={{
+                    enabled: true,
+                }}
+                breakpoints={{
+                    769: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
+                    },
+                }}
+                modules={[Autoplay]}
+                className="mySwiper mx-auto desktop:w-[1500px] mt-24 mb-24 lg:w-[1500px]"
+            >
+                <SwiperSlide>
+                    <div className="card lg:w-96 bg-base-100 shadow-xl">
+                        <figure className="px-16 pt-10">
+                            <img src="https://i.ibb.co/WfxzcSJ/photo-1573878221976-aab98adadabc.jpg" alt="Shoes" className="rounded-xl h-44 w-72" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Iftekhar Aziz</h2>
+                            <p className="text-gray-400">Using this site has made managing my projects a breeze!</p>
                         </div>
                     </div>
-                </main>
-            </div>
-        </section>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="card lg:w-96 bg-base-100 shadow-xl">
+                        <figure className="px-16 pt-10">
+                            <img src="https://i.ibb.co/8s0YxSk/premium-photo-1661544010200-ea07bc18f8d5.jpg" alt="Shoes" className="rounded-xl h-44 w-72" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Rahat Salim</h2>
+                            <p className="text-gray-400">The task tracking feature has significantly boosted my productivity.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="card lg:w-96 bg-base-100 shadow-xl">
+                        <figure className="px-16 pt-10">
+                            <img src="https://i.ibb.co/fY38CWL/photo-1544717297-fa95b6ee9643.jpg" alt="Shoes" className="rounded-xl h-44 w-72" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Nasiful Islam</h2>
+                            <p className="text-gray-400">The customizable features make it perfect for any workflow.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="card lg:w-96 bg-base-100 shadow-xl">
+                        <figure className="px-16 pt-10">
+                            <img src="https://i.ibb.co/kcLK8dS/premium-photo-1661302816947-ba7c46fbc8ff.jpg" alt="Shoes" className="rounded-xl h-44 w-72" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Abu Jaher</h2>
+                            <p className="text-gray-400">I can not imagine organizing my tasks without this site now!</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="card lg:w-96 bg-base-100 shadow-xl">
+                        <figure className="px-16 pt-10">
+                            <img src="https://i.ibb.co/t2jQKMm/photo-1713947501966-34897f21162e.jpg" alt="Shoes" className="rounded-xl h-44 w-72" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Salman Shamil</h2>
+                            <p className="text-gray-400">Customer support has been fantastic and incredibly helpful.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <div className="card lg:w-96 bg-base-100 shadow-xl">
+                        <figure className="px-16 pt-10">
+                            <img src="https://i.ibb.co/Tt59nXF/premium-photo-1664304140690-bbd58c577a45.jpg" alt="Shoes" className="rounded-xl h-44 w-72" />
+                        </figure>
+                        <div className="card-body items-center text-center">
+                            <h2 className="card-title">Imraan Hossain</h2>
+                            <p className="text-gray-400">This site has transformed the way I approach my daily tasks.</p>
+                        </div>
+                    </div>
+                </SwiperSlide>
+            </Swiper>
+        </div>
     );
 };
 

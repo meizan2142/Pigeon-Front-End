@@ -24,14 +24,14 @@ const AllFacilities = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4 md:px-8 lg:px-12">
                     {cards.map((card, index) => (
                         <div
-                            key={index}
-                            className="bg-white hover:text-white hover:bg-[#AC8D68] transition-all ease-in-out text-black rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
-                        >
-                            <div className="text-4xl sm:text-5xl mb-4">{card.icon}</div>
-                            <h3 className="text-lg sm:text-xl font-semibold mb-2">{card.title}</h3>
-                            <p className="text-sm sm:text-base">{card.description}</p>
-                        </div>
-                    ))}
+                                key={index}
+                                className="bg-white hover:text-white hover:bg-[#AC8D68] transition-all ease-in-out text-black rounded-2xl shadow-lg p-6 flex flex-col items-center text-center"
+                            >
+                                <div className="text-4xl sm:text-5xl mb-4">{card.icon}</div>
+                                <h3 className="text-lg sm:text-xl font-semibold mb-2">{card.title}</h3>
+                                <p className="text-sm sm:text-base">{card.description}</p>
+                            </div>
+                        ))}
                 </div>
             </div>
         </section>
