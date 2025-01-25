@@ -8,6 +8,9 @@ import { Autoplay } from 'swiper/modules';
 const Testimonials = () => {
     return (
         <div>
+            <div>
+                <h1 className="text-black text-center mt-24 mb-10 text-4xl font-bold pb-5">Club Members</h1>
+            </div>
             <Swiper
                 slidesPerView={1}
                 centeredSlides={false}
@@ -28,7 +31,7 @@ const Testimonials = () => {
                     },
                 }}
                 modules={[Autoplay]}
-                className="mySwiper mx-auto desktop:w-[1500px] mt-24 mb-24 lg:w-[1500px]"
+                className="mySwiper mx-auto desktop:w-[1500px] mb-24 lg:w-[1500px]"
             >
                 <SwiperSlide>
                     <div className="card lg:w-96 bg-base-100 shadow-xl">

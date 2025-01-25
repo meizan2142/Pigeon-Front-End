@@ -1,4 +1,5 @@
 import AllFacilities from "./Components/AllFacilites/AllFacilities";
+import Footer from "./Components/Footer/Footer";
 // import Footer from "./Components/Footer/Footer";
 import Hero from "./Components/Hero/Hero";
 import MissionVisionSection from "./Components/MissionVisionSection/MissionVisionSection";
@@ -24,7 +25,7 @@ function App() {
         <RecentRaces/>
       </div>
       <div>
-        {/* <Footer/> */}
+        <Footer />
       </div>
     </div>
   )

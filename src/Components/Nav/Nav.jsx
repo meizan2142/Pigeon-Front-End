@@ -126,9 +126,9 @@ const Nav = () => {
             >
                 <div className="container flex items-center justify-between mx-auto px-6 py-4">
                     {/* Logo */}
-                    <h1 className="text-white font-bold text-xl mobile:text-lg lg:text-3xl">
-                        Pigeon
-                    </h1>
+                    <div className="w-20 h-20">
+                        <img src="https://i.ibb.co.com/fSRyxtf/Whats-App-Image-2025-01-25-at-13-27-25-689d585d-removebg-preview.png" alt="" />
+                    </div>
                     {/* Menu */}
                     <ul className="hidden md:flex space-x-5 lg:space-x-10">
                         {navMenu.map((menu) => (
