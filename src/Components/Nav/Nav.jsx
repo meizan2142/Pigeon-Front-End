@@ -121,7 +121,7 @@ const Nav = () => {
     return (
         <div>
             <header
-                className={`fixed top-0 w-full z-20 bg-[#0D1230] text-white shadow-lg transition-transform duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
+                className={`fixed top-0 w-full z-20 ${scrollPosition > 300 ? "bg-[#0D1230]" : "bg-transparent" } text-white transition-transform duration-300 ${showNavbar ? "translate-y-" : "-translate-y-full"
                     }`}
             >
                 <div className="container flex items-center justify-between mx-auto px-6 py-4">

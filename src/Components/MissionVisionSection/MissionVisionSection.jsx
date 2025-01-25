@@ -1,6 +1,6 @@
 const MissionVisionSection = () => {
     return (
-        <section className="bg-white py-10 mt-10 px-5 mobile:py-6 mobile:px-3 lg:py-20 lg:px-28 lg:mx-auto lg:w-[1400px]">
+        <section className="bg-white py-10 mt-24 px-5 mobile:py-6 mobile:px-3 lg:px-28 lg:mx-auto lg:w-[1400px]">
             <div className="grid grid-cols-1 mobile:gap-6 lg:grid-cols-2 lg:w-[1200px] gap-10 items-center">
                 {/* Left Side: Image and Overlay */}
                 <div className="relative">

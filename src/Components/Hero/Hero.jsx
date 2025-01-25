@@ -19,7 +19,7 @@ const Hero = () => {
                             id="id"
                             type="number"
                             placeholder="Enter ID"
-                            className="w-full rounded-md outline-none px-4 py-3 text-black border sm:border-r-0"
+                            className="w-full rounded-md outline-none px-4 py-3 bg-transparent text-white border sm:border-r-0"
                         />
                         <button
                             type="button"
