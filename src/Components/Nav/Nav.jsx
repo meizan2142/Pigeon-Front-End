@@ -10,12 +10,14 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { IoMdMenu } from "react-icons/io";
+import { NavLink } from "react-router";
 
 const Nav = () => {
+    // const [isOpen, setIsOpen] = useState(false);
     const navMenu = [
         {
             menuName: "Home",
-            path: "",
+            path: "/",
             submenu: [],
         },
         {
@@ -30,7 +32,7 @@ const Nav = () => {
             menuName: "Race",
             path: "",
             submenu: [
-                { name: "Upcoming Races", path: "" },
+                { name: "Upcoming Races", path: "/upcomingraces" },
                 { name: "Results", path: "" },
             ],
         },
@@ -121,7 +123,7 @@ const Nav = () => {
     return (
         <div>
             <header
-                className={`fixed top-0 w-full z-20 ${scrollPosition > 300 ? "bg-[#0D1230]" : "bg-transparent" } text-white transition-transform duration-300 ${showNavbar ? "translate-y-" : "-translate-y-full"
+                className={`fixed top-0 w-full z-20 ${scrollPosition > 300 ? "bg-[#0D1230]" : "bg-transparent"} text-white transition-transform duration-300 ${showNavbar ? "translate-y-" : "-translate-y-full"
                     }`}
             >
                 <div className="container flex items-center justify-between mx-auto px-6 py-4">
@@ -130,27 +132,15 @@ const Nav = () => {
                         <img src="https://i.ibb.co.com/fSRyxtf/Whats-App-Image-2025-01-25-at-13-27-25-689d585d-removebg-preview.png" alt="" />
                     </div>
                     {/* Menu */}
-                    <ul className="hidden md:flex space-x-5 lg:space-x-10">
-                        {navMenu.map((menu) => (
-                            <li key={menu.menuName} className="group relative">
-                                <button className="text-white font-medium text-sm lg:text-lg hover:text-[#AC8D68] transition-all ease-in-out">
-                                    {menu.menuName}
-                                </button>
-                                {menu.submenu.length > 0 && (
-                                    <div className="absolute hidden group-hover:block bg-gray-100 min-w-[160px] shadow-md mt-1 rounded">
-                                        {menu.submenu.map((sub, index) => (
-                                            <a
-                                                key={index}
-                                                href={sub.path}
-                                                className="block px-4 py-2 text-gray-800 hover:bg-gray-200 hover:text-gray-900"
-                                            >
-                                                {sub.name}
-                                            </a>
-                                        ))}
-                                    </div>
-                                )}
-                            </li>
-                        ))}
+                    <ul className="hidden md:flex space-x-5 lg:space-x-10 desktop:mr-16 lg:mr-0">
+                        <li>
+                            <NavLink to='/' className="text-white px-6 py-3 text-lg font-medium rounded-md">Home</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/upcomingraces'  className="text-white px-6 py-3 text-lg font-medium rounded-md">Latest Races</NavLink>
+                        </li>
+
+
                     </ul>
                     {/* Mobile Menu Icon */}
                     <div className="md:hidden">
