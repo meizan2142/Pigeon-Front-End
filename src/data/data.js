@@ -1,4 +1,4 @@
 export const getProducts = async () => {
-    const res = await fetch('https://api.jsonbin.io/v3/qs/67a6c87be41b4d34e4860ebd')
+    const res = await fetch('https://api.jsonbin.io/v3/qs/67a6e5c9ad19ca34f8fbe8e4')
     return res.json();
 };
