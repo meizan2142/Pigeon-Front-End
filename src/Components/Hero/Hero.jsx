@@ -2,6 +2,7 @@ import { useState } from "react";
 import BgVideo from "../BgVideo/BgVideo";
 import { getProducts } from "../../data/data";
 import { useQuery } from "@tanstack/react-query";
+import { NavLink } from "react-router-dom"; // ✅ Correct import
 
 const Hero = () => {
     const [showCard, setShowCard] = useState(false);
@@ -12,9 +13,9 @@ const Hero = () => {
         queryFn: getProducts,
     });
 
-    // Filter data based on input query
+    // ✅ Ensure races exist before filtering
     const filteredData =
-        races?.record?.filter(
+        races?.filter(
             (item) =>
                 item.name.toLowerCase().includes(query.toLowerCase()) ||
                 item.club_name.toLowerCase().includes(query.toLowerCase()) ||
@@ -51,26 +52,32 @@ const Hero = () => {
                         <div className="w-full max-w-sm mx-auto">
                             <input
                                 id="id"
-                                // type="number"
                                 placeholder="Enter ID"
                                 className="w-full rounded-md outline-none px-4 py-3 bg-transparent text-white border sm:border-r-0"
                                 onFocus={() => setShowCard(true)}
-                                onBlur={() => setShowCard(false)}
+                                onBlur={() => setTimeout(() => setShowCard(false), 200)} // ✅ Prevent closing too fast
                                 onChange={(e) => setQuery(e.target.value)}
                             />
 
                             {/* Show results dynamically based on user input */}
                             {showCard && query && (
-                                <div className="mt-2 p-4 border rounded-md bg-gray-800 text-white">
+                                <div className="mt-2 p-4 border space-y-5 grid rounded-md bg-gray-800 text-white">
                                     {filteredData.length > 0 ? (
-                                        filteredData.map((item, index) => (
-                                            <p key={index}>{item.name}</p>
+                                        filteredData.map((item) => (
+                                            <NavLink
+                                                key={item._id}
+                                                to={`/race/${item._id}`} // ✅ Navigate to race details page
+                                                className="block text-white hover:text-gray-300"
+                                            >
+                                                {item.name}
+                                            </NavLink>
                                         ))
                                     ) : (
                                         <p>No results found</p>
                                     )}
                                 </div>
                             )}
+
                         </div>
                     </div>
                 </div>

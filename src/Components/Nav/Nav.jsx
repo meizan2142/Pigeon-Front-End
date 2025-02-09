@@ -1,58 +1,51 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { Fragment, useEffect, useState } from "react";
-import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { IoMdMenu } from "react-icons/io";
 import { NavLink } from "react-router";
 
 const Nav = () => {
     // const [isOpen, setIsOpen] = useState(false);
-    const navMenu = [
-        {
-            menuName: "Home",
-            path: "/",
-            submenu: [],
-        },
-        {
-            menuName: "BRPFC",
-            path: "",
-            submenu: [
-                { name: "History", path: "" },
-                { name: "Rules", path: "" },
-            ],
-        },
-        {
-            menuName: "Race",
-            path: "",
-            submenu: [
-                { name: "Upcoming Races", path: "/upcomingraces" },
-                { name: "Results", path: "" },
-            ],
-        },
-        {
-            menuName: "Members",
-            path: "",
-            submenu: [
-                { name: "Join Us", path: "" },
-                { name: "Directory", path: "" },
-            ],
-        },
-        {
-            menuName: "Auction",
-            path: "",
-            submenu: [
-                { name: "Bidding Rules", path: "" },
-                { name: "Live Auctions", path: "" },
-            ],
-        },
-    ];
+    // const navMenu = [
+    //     {
+    //         menuName: "Home",
+    //         path: "/",
+    //         submenu: [],
+    //     },
+    //     {
+    //         menuName: "BRPFC",
+    //         path: "",
+    //         submenu: [
+    //             { name: "History", path: "" },
+    //             { name: "Rules", path: "" },
+    //         ],
+    //     },
+    //     {
+    //         menuName: "Race",
+    //         path: "",
+    //         submenu: [
+    //             { name: "Upcoming Races", path: "/upcomingraces" },
+    //             { name: "Results", path: "" },
+    //         ],
+    //     },
+    //     {
+    //         menuName: "Members",
+    //         path: "",
+    //         submenu: [
+    //             { name: "Join Us", path: "" },
+    //             { name: "Directory", path: "" },
+    //         ],
+    //     },
+    //     {
+    //         menuName: "Auction",
+    //         path: "",
+    //         submenu: [
+    //             { name: "Bidding Rules", path: "" },
+    //             { name: "Live Auctions", path: "" },
+    //         ],
+    //     },
+    // ];
 
     const [scrollPosition, setScrollPosition] = useState(0);
     const [showNavbar, setShowNavbar] = useState(true);
@@ -88,37 +81,6 @@ const Nav = () => {
         setState({ ...state, [anchor]: open });
     };
 
-    const list = (anchor) => (
-        <Box
-            sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
-            role="presentation"
-            onClick={toggleDrawer(anchor, false)}
-            onKeyDown={toggleDrawer(anchor, false)}
-        >
-            <List>
-                {navMenu.map((menu) => (
-                    <Fragment key={menu.menuName}>
-                        <ListItem disablePadding>
-                            <ListItemButton>
-                                <ListItemIcon>
-                                    <InboxIcon />
-                                </ListItemIcon>
-                                <ListItemText primary={menu.menuName} />
-                            </ListItemButton>
-                        </ListItem>
-                        {menu.submenu.length > 0 &&
-                            menu.submenu.map((sub, index) => (
-                                <ListItem key={index} disablePadding sx={{ pl: 4 }}>
-                                    <ListItemButton>
-                                        <ListItemText primary={sub.name} />
-                                    </ListItemButton>
-                                </ListItem>
-                            ))}
-                    </Fragment>
-                ))}
-            </List>
-        </Box>
-    );
 
     return (
         <div>
@@ -137,10 +99,8 @@ const Nav = () => {
                             <NavLink to='/' className="text-white px-6 py-3 text-lg font-medium rounded-md">Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/upcomingraces'  className="text-white px-6 py-3 text-lg font-medium rounded-md">Latest Races</NavLink>
+                            <NavLink to='/upcomingraces' className="text-white px-6 py-3 text-lg font-medium rounded-md">Latest Races</NavLink>
                         </li>
-
-
                     </ul>
                     {/* Mobile Menu Icon */}
                     <div className="md:hidden">
@@ -150,11 +110,19 @@ const Nav = () => {
                                     <IoMdMenu size={25} color="white" />
                                 </Button>
                                 <Drawer
-                                    anchor={anchor}
+                                    // anchor={anchor}
                                     open={state[anchor]}
                                     onClose={toggleDrawer(anchor, false)}
                                 >
-                                    {list(anchor)}
+                                    {/* {list(anchor)} */}
+                                    <div className="list-none pt-8 space-y-5">
+                                        <li>
+                                            <NavLink to='/' className="text-black px-6 py-3 text-lg font-medium rounded-md">Home</NavLink>
+                                        </li>
+                                        <li>
+                                            <NavLink to='/upcomingraces' className="text-black px-6 py-3 text-lg font-medium rounded-md">Latest Races</NavLink>
+                                        </li>
+                                    </div>
                                 </Drawer>
                             </Fragment>
                         ))}
