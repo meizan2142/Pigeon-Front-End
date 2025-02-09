@@ -1,7 +1,7 @@
 [
     {
         "rank": 1,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111485,
         "distance": 268.75,
@@ -11,7 +11,7 @@
     },
     {
         "rank": 2,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111476,
         "distance": 268.75,
@@ -21,7 +21,7 @@
     },
     {
         "rank": 3,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111626,
         "distance": 268.75,
@@ -31,7 +31,7 @@
     },
     {
         "rank": 4,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111515,
         "distance": 268.75,
@@ -41,7 +41,7 @@
     },
     {
         "rank": 5,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111110,
         "distance": 268.75,
@@ -51,7 +51,7 @@
     },
     {
         "rank": 6,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111629,
         "distance": 268.75,
@@ -61,7 +61,7 @@
     },
     {
         "rank": 7,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111195,
         "distance": 268.75,
@@ -71,7 +71,7 @@
     },
     {
         "rank": 8,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111539,
         "distance": 268.75,
@@ -81,7 +81,7 @@
     },
     {
         "rank": 9,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 111656,
         "distance": 270.32,
@@ -91,7 +91,7 @@
     },
     {
         "rank": 10,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 111587,
         "distance": 270.32,
@@ -101,7 +101,7 @@
     },
     {
         "rank": 11,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 745023,
         "distance": 268.75,
@@ -111,7 +111,7 @@
     },
     {
         "rank": 12,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 111596,
         "distance": 270.32,
@@ -131,7 +131,7 @@
     },
     {
         "rank": 14,
-        "name": "Bashar name",
+        "name": "Bashar",
         "club_name": "BRPAC",
         "ring_no": 970,
         "distance": 360.97,
@@ -161,7 +161,7 @@
     },
     {
         "rank": 17,
-        "name": "Roni Racing name",
+        "name": "Roni Racing",
         "club_name": "CRPSC",
         "ring_no": 46,
         "distance": 273.19,
@@ -171,7 +171,7 @@
     },
     {
         "rank": 18,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 100,
         "distance": 268.75,
@@ -181,7 +181,7 @@
     },
     {
         "rank": 19,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111503,
         "distance": 268.75,
@@ -191,7 +191,7 @@
     },
     {
         "rank": 20,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111534,
         "distance": 268.75,
@@ -201,7 +201,7 @@
     },
     {
         "rank": 21,
-        "name": "Shopno name",
+        "name": "Shopno",
         "club_name": "CRPSC",
         "ring_no": 457497,
         "distance": 276.1,
@@ -211,7 +211,7 @@
     },
     {
         "rank": 22,
-        "name": "Shopno name",
+        "name": "Shopno",
         "club_name": "CRPSC",
         "ring_no": 741858,
         "distance": 276.1,
@@ -231,7 +231,7 @@
     },
     {
         "rank": 24,
-        "name": "Shopno name",
+        "name": "Shopno",
         "club_name": "CRPSC",
         "ring_no": 111262,
         "distance": 276.1,
@@ -241,7 +241,7 @@
     },
     {
         "rank": 25,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111468,
         "distance": 268.75,
@@ -251,7 +251,7 @@
     },
     {
         "rank": 26,
-        "name": "A&K name",
+        "name": "A&K",
         "club_name": "CRPSC",
         "ring_no": 111695,
         "distance": 248.45,
@@ -261,7 +261,7 @@
     },
     {
         "rank": 27,
-        "name": "A&K name",
+        "name": "A&K",
         "club_name": "CRPSC",
         "ring_no": 111391,
         "distance": 248.45,
@@ -271,7 +271,7 @@
     },
     {
         "rank": 28,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 723526,
         "distance": 268.75,
@@ -281,7 +281,7 @@
     },
     {
         "rank": 29,
-        "name": "CTG Racing name",
+        "name": "CTG Racing",
         "club_name": "CRPSC",
         "ring_no": 111411,
         "distance": 268.98,
@@ -301,7 +301,7 @@
     },
     {
         "rank": 31,
-        "name": "Iqra Racing name",
+        "name": "Iqra Racing",
         "club_name": "CRPSC",
         "ring_no": 111343,
         "distance": 268.74,
@@ -311,7 +311,7 @@
     },
     {
         "rank": 32,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111480,
         "distance": 268.75,
@@ -321,7 +321,7 @@
     },
     {
         "rank": 33,
-        "name": "Bashar name",
+        "name": "Bashar",
         "club_name": "BRPAC",
         "ring_no": 360,
         "distance": 360.97,
@@ -331,7 +331,7 @@
     },
     {
         "rank": 34,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 513610,
         "distance": 270.32,
@@ -341,7 +341,7 @@
     },
     {
         "rank": 35,
-        "name": "S name",
+        "name": "S",
         "club_name": "CRPSC",
         "ring_no": 64,
         "distance": 266.64,
@@ -351,7 +351,7 @@
     },
     {
         "rank": 36,
-        "name": "Shopno name",
+        "name": "Shopno",
         "club_name": "CRPSC",
         "ring_no": 111268,
         "distance": 276.1,
@@ -361,7 +361,7 @@
     },
     {
         "rank": 37,
-        "name": "S name",
+        "name": "S",
         "club_name": "CRPSC",
         "ring_no": 73,
         "distance": 266.64,
@@ -371,7 +371,7 @@
     },
     {
         "rank": 38,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 726736,
         "distance": 268.75,
@@ -401,7 +401,7 @@
     },
     {
         "rank": 41,
-        "name": "Iqra Racing name",
+        "name": "Iqra Racing",
         "club_name": "CRPSC",
         "ring_no": 111346,
         "distance": 268.74,
@@ -451,7 +451,7 @@
     },
     {
         "rank": 46,
-        "name": "Roni Racing name",
+        "name": "Roni Racing",
         "club_name": "CRPSC",
         "ring_no": 739140,
         "distance": 273.19,
@@ -461,7 +461,7 @@
     },
     {
         "rank": 47,
-        "name": "CTG Racing name",
+        "name": "CTG Racing",
         "club_name": "CRPSC",
         "ring_no": 111416,
         "distance": 268.98,
@@ -501,7 +501,7 @@
     },
     {
         "rank": 51,
-        "name": "Shopno name",
+        "name": "Shopno",
         "club_name": "CRPSC",
         "ring_no": 111417,
         "distance": 276.1,
@@ -511,7 +511,7 @@
     },
     {
         "rank": 52,
-        "name": "S name",
+        "name": "S",
         "club_name": "CRPSC",
         "ring_no": 63,
         "distance": 266.64,
@@ -531,7 +531,7 @@
     },
     {
         "rank": 54,
-        "name": "Paharika name",
+        "name": "Paharika",
         "club_name": "BRPAC",
         "ring_no": 2751,
         "distance": 369.55,
@@ -541,7 +541,7 @@
     },
     {
         "rank": 55,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111105,
         "distance": 268.75,
@@ -581,7 +581,7 @@
     },
     {
         "rank": 59,
-        "name": "Sabiha name",
+        "name": "Sabiha",
         "club_name": "BRPAC",
         "ring_no": 3192,
         "distance": 357.15,
@@ -591,7 +591,7 @@
     },
     {
         "rank": 60,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 111112,
         "distance": 270.32,
@@ -601,7 +601,7 @@
     },
     {
         "rank": 61,
-        "name": "Sabiha name",
+        "name": "Sabiha",
         "club_name": "BRPAC",
         "ring_no": 2616,
         "distance": 357.15,
@@ -621,7 +621,7 @@
     },
     {
         "rank": 63,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 111275,
         "distance": 270.32,
@@ -641,7 +641,7 @@
     },
     {
         "rank": 65,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111514,
         "distance": 268.75,
@@ -661,7 +661,7 @@
     },
     {
         "rank": 67,
-        "name": "CTG Racing name",
+        "name": "CTG Racing",
         "club_name": "CRPSC",
         "ring_no": 111307,
         "distance": 268.98,
@@ -671,7 +671,7 @@
     },
     {
         "rank": 68,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 726723,
         "distance": 268.75,
@@ -711,7 +711,7 @@
     },
     {
         "rank": 72,
-        "name": "A&K name",
+        "name": "A&K",
         "club_name": "CRPSC",
         "ring_no": 111242,
         "distance": 248.45,
@@ -721,7 +721,7 @@
     },
     {
         "rank": 73,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 723523,
         "distance": 268.75,
@@ -731,7 +731,7 @@
     },
     {
         "rank": 74,
-        "name": "Shopno name",
+        "name": "Shopno",
         "club_name": "CRPSC",
         "ring_no": 111258,
         "distance": 276.1,
@@ -741,7 +741,7 @@
     },
     {
         "rank": 75,
-        "name": "A&K name",
+        "name": "A&K",
         "club_name": "CRPSC",
         "ring_no": 111393,
         "distance": 248.45,
@@ -751,7 +751,7 @@
     },
     {
         "rank": 76,
-        "name": "CTG Racing name",
+        "name": "CTG Racing",
         "club_name": "CRPSC",
         "ring_no": 111488,
         "distance": 268.98,
@@ -761,7 +761,7 @@
     },
     {
         "rank": 77,
-        "name": "CTG Racing name",
+        "name": "CTG Racing",
         "club_name": "CRPSC",
         "ring_no": 111306,
         "distance": 268.98,
@@ -771,7 +771,7 @@
     },
     {
         "rank": 78,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 111690,
         "distance": 270.32,
@@ -841,7 +841,7 @@
     },
     {
         "rank": 85,
-        "name": "S name",
+        "name": "S",
         "club_name": "CRPSC",
         "ring_no": 69,
         "distance": 266.64,
@@ -851,7 +851,7 @@
     },
     {
         "rank": 86,
-        "name": "S name",
+        "name": "S",
         "club_name": "CRPSC",
         "ring_no": 111155,
         "distance": 266.64,
@@ -861,7 +861,7 @@
     },
     {
         "rank": 87,
-        "name": "Sabiha name",
+        "name": "Sabiha",
         "club_name": "BRPAC",
         "ring_no": 3168,
         "distance": 357.15,
@@ -881,7 +881,7 @@
     },
     {
         "rank": 89,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 723534,
         "distance": 268.75,
@@ -891,7 +891,7 @@
     },
     {
         "rank": 90,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111528,
         "distance": 268.75,
@@ -901,7 +901,7 @@
     },
     {
         "rank": 91,
-        "name": "Sabiha name",
+        "name": "Sabiha",
         "club_name": "BRPAC",
         "ring_no": 3189,
         "distance": 357.15,
@@ -921,7 +921,7 @@
     },
     {
         "rank": 93,
-        "name": "Shopno name",
+        "name": "Shopno",
         "club_name": "CRPSC",
         "ring_no": 111251,
         "distance": 276.1,
@@ -951,7 +951,7 @@
     },
     {
         "rank": 96,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111542,
         "distance": 268.75,
@@ -961,7 +961,7 @@
     },
     {
         "rank": 97,
-        "name": "Paharika name",
+        "name": "Paharika",
         "club_name": "BRPAC",
         "ring_no": 3104,
         "distance": 369.55,
@@ -1011,7 +1011,7 @@
     },
     {
         "rank": 102,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111547,
         "distance": 268.75,
@@ -1021,7 +1021,7 @@
     },
     {
         "rank": 103,
-        "name": "Sabiha name",
+        "name": "Sabiha",
         "club_name": "BRPAC",
         "ring_no": 160088,
         "distance": 357.15,
@@ -1031,7 +1031,7 @@
     },
     {
         "rank": 104,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111512,
         "distance": 268.75,
@@ -1051,7 +1051,7 @@
     },
     {
         "rank": 106,
-        "name": "A&K name",
+        "name": "A&K",
         "club_name": "CRPSC",
         "ring_no": "BAN 83",
         "distance": 248.45,
@@ -1061,7 +1061,7 @@
     },
     {
         "rank": 107,
-        "name": "Bashar name",
+        "name": "Bashar",
         "club_name": "BRPAC",
         "ring_no": 106051,
         "distance": 360.97,
@@ -1071,7 +1071,7 @@
     },
     {
         "rank": 108,
-        "name": "Bashar name",
+        "name": "Bashar",
         "club_name": "BRPAC",
         "ring_no": 972,
         "distance": 360.97,
@@ -1081,7 +1081,7 @@
     },
     {
         "rank": 109,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 111653,
         "distance": 270.32,
@@ -1091,7 +1091,7 @@
     },
     {
         "rank": 110,
-        "name": "Sabiha name",
+        "name": "Sabiha",
         "club_name": "BRPAC",
         "ring_no": 3177,
         "distance": 357.15,
@@ -1111,7 +1111,7 @@
     },
     {
         "rank": 112,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 111120,
         "distance": 270.32,
@@ -1151,7 +1151,7 @@
     },
     {
         "rank": 116,
-        "name": "Shopno name",
+        "name": "Shopno",
         "club_name": "CRPSC",
         "ring_no": 111419,
         "distance": 276.1,
@@ -1201,7 +1201,7 @@
     },
     {
         "rank": 121,
-        "name": "Sabiha name",
+        "name": "Sabiha",
         "club_name": "BRPAC",
         "ring_no": 3167,
         "distance": 357.15,
@@ -1211,7 +1211,7 @@
     },
     {
         "rank": 122,
-        "name": "Sabiha name",
+        "name": "Sabiha",
         "club_name": "BRPAC",
         "ring_no": 985,
         "distance": 357.15,
@@ -1241,7 +1241,7 @@
     },
     {
         "rank": 125,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111367,
         "distance": 268.75,
@@ -1251,7 +1251,7 @@
     },
     {
         "rank": 126,
-        "name": "CTG Racing name",
+        "name": "CTG Racing",
         "club_name": "CRPSC",
         "ring_no": 111301,
         "distance": 268.98,
@@ -1281,7 +1281,7 @@
     },
     {
         "rank": 129,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111471,
         "distance": 268.75,
@@ -1291,7 +1291,7 @@
     },
     {
         "rank": 130,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111616,
         "distance": 268.75,
@@ -1301,7 +1301,7 @@
     },
     {
         "rank": 131,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 64847,
         "distance": 270.32,
@@ -1311,7 +1311,7 @@
     },
     {
         "rank": 132,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111634,
         "distance": 268.75,
@@ -1321,7 +1321,7 @@
     },
     {
         "rank": 133,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111467,
         "distance": 268.75,
@@ -1331,7 +1331,7 @@
     },
     {
         "rank": 134,
-        "name": "Roni Racing name",
+        "name": "Roni Racing",
         "club_name": "CRPSC",
         "ring_no": 111312,
         "distance": 273.19,
@@ -1341,7 +1341,7 @@
     },
     {
         "rank": 135,
-        "name": "RH name",
+        "name": "RH",
         "club_name": "CRPSC",
         "ring_no": 43,
         "distance": 270.32,
@@ -1351,7 +1351,7 @@
     },
     {
         "rank": 136,
-        "name": "Iqra Racing name",
+        "name": "Iqra Racing",
         "club_name": "CRPSC",
         "ring_no": 14,
         "distance": 268.74,
@@ -1361,7 +1361,7 @@
     },
     {
         "rank": 137,
-        "name": "L&A name",
+        "name": "L&A",
         "club_name": "CRPSC",
         "ring_no": 111351,
         "distance": 268.75,
@@ -1371,7 +1371,7 @@
     },
     {
         "rank": 138,
-        "name": "A&K name",
+        "name": "A&K",
         "club_name": "CRPSC",
         "ring_no": 111551,
         "distance": 248.45,
@@ -1381,7 +1381,7 @@
     },
     {
         "rank": 139,
-        "name": "A&K name",
+        "name": "A&K",
         "club_name": "CRPSC",
         "ring_no": 111302,
         "distance": 248.45,
