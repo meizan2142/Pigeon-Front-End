@@ -21,7 +21,7 @@ const Hero = () => {
                 item.club_name.toLowerCase().includes(query.toLowerCase()) ||
                 item.ring_no.toString().includes(query)
         ) || [];
-
+        
     return (
         <div>
             <section className="relative w-full h-[80vh] md:h-screen">
@@ -60,7 +60,7 @@ const Hero = () => {
 
                             {/* Show results dynamically based on user input */}
                             {showCard && query && (
-                                <div className="mt-2 p-4 border rounded-md bg-gray-800 text-white overflow-x-auto">
+                                <div className="mt-2 p-4 w-[450px] border rounded-md bg-gray-800 text-white overflow-x-auto">
                                     {filteredData.length > 0 ? (
                                         <table className="w-full border-collapse text-sm sm:text-base">
                                             <thead>
@@ -70,8 +70,6 @@ const Hero = () => {
                                                     <th className="px-2 sm:px-3 py-2">Club Name</th>
                                                     <th className="px-2 sm:px-3 py-2">Ring No</th>
                                                     <th className="px-2 sm:px-3 py-2">Distance</th>
-                                                    <th className="px-2 sm:px-3 py-2">Trapping Time</th>
-                                                    <th className="px-2 sm:px-3 py-2">Total Time</th>
                                                     <th className="px-2 sm:px-3 py-2">Velocity</th>
                                                 </tr>
                                             </thead>
@@ -81,7 +79,7 @@ const Hero = () => {
                                                         key={item._id}
                                                         className="text-center border-b hover:bg-gray-700 transition"
                                                     >
-                                                        <td className="px-2 sm:px-3 py-2 font-medium text-gray-300">
+                                                        <td className="px-2 sm:px-3 py-2 font-medium text-white">
                                                             {item.rank || "N/A"}
                                                         </td>
                                                         <td className="px-2 sm:px-3 py-2">
@@ -95,8 +93,6 @@ const Hero = () => {
                                                         <td className="px-2 sm:px-3 py-2">{item.club_name || "N/A"}</td>
                                                         <td className="px-2 sm:px-3 py-2">{item.ring_no || "N/A"}</td>
                                                         <td className="px-2 sm:px-3 py-2">{item.distance || "N/A"}</td>
-                                                        <td className="px-2 sm:px-3 py-2">{item.trapping_time || "N/A"}</td>
-                                                        <td className="px-2 sm:px-3 py-2">{item.total_time || "N/A"}</td>
                                                         <td className="px-2 sm:px-3 py-2">{item.velocity || "N/A"}</td>
                                                     </tr>
                                                 ))}
