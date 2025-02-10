@@ -40,7 +40,6 @@ const Hero = () => {
                         />
                     </div>
                 </div>
-
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 bg-black bg-opacity-50 px-4">
                     <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold mb-6">
                         See The Latest Race Results
@@ -61,19 +60,50 @@ const Hero = () => {
 
                             {/* Show results dynamically based on user input */}
                             {showCard && query && (
-                                <div className="mt-2 p-4 border space-y-5 grid rounded-md bg-gray-800 text-white">
+                                <div className="mt-2 p-4 border rounded-md bg-gray-800 text-white overflow-x-auto">
                                     {filteredData.length > 0 ? (
-                                        filteredData.map((item) => (
-                                            <NavLink
-                                                key={item._id}
-                                                to={`/race/${item._id}`} // ✅ Navigate to race details page
-                                                className="block text-white hover:text-gray-300"
-                                            >
-                                                {item.name}
-                                            </NavLink>
-                                        ))
+                                        <table className="w-full border-collapse text-sm sm:text-base">
+                                            <thead>
+                                                <tr className="bg-gray-700 text-gray-300">
+                                                    <th className="px-2 sm:px-3 py-2">Rank</th>
+                                                    <th className="px-2 sm:px-3 py-2">Loft Name</th>
+                                                    <th className="px-2 sm:px-3 py-2">Club Name</th>
+                                                    <th className="px-2 sm:px-3 py-2">Ring No</th>
+                                                    <th className="px-2 sm:px-3 py-2">Distance</th>
+                                                    <th className="px-2 sm:px-3 py-2">Trapping Time</th>
+                                                    <th className="px-2 sm:px-3 py-2">Total Time</th>
+                                                    <th className="px-2 sm:px-3 py-2">Velocity</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {filteredData.map((item) => (
+                                                    <tr
+                                                        key={item._id}
+                                                        className="text-center border-b hover:bg-gray-700 transition"
+                                                    >
+                                                        <td className="px-2 sm:px-3 py-2 font-medium text-gray-300">
+                                                            {item.rank || "N/A"}
+                                                        </td>
+                                                        <td className="px-2 sm:px-3 py-2">
+                                                            <NavLink
+                                                                to={`/race/${item._id}`}
+                                                                className="text-white hover:text-gray-300"
+                                                            >
+                                                                {item.name || "N/A"}
+                                                            </NavLink>
+                                                        </td>
+                                                        <td className="px-2 sm:px-3 py-2">{item.club_name || "N/A"}</td>
+                                                        <td className="px-2 sm:px-3 py-2">{item.ring_no || "N/A"}</td>
+                                                        <td className="px-2 sm:px-3 py-2">{item.distance || "N/A"}</td>
+                                                        <td className="px-2 sm:px-3 py-2">{item.trapping_time || "N/A"}</td>
+                                                        <td className="px-2 sm:px-3 py-2">{item.total_time || "N/A"}</td>
+                                                        <td className="px-2 sm:px-3 py-2">{item.velocity || "N/A"}</td>
+                                                    </tr>
+                                                ))}
+                                            </tbody>
+                                        </table>
                                     ) : (
-                                        <p>No results found</p>
+                                        <p className="text-center">No results found</p>
                                     )}
                                 </div>
                             )}
