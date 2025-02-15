@@ -2,13 +2,16 @@ import { useQuery } from "@tanstack/react-query";
 import { SyncLoader } from "react-spinners";
 import { getProducts } from "../../data/data";
 import { useState } from "react";
+import Pagination from "../../Components/Pagination/Pagination";
 
 const UpComingRaces = () => {
     const [query, setQuery] = useState("");
+    const [currentPage, setCurrentPage] = useState(1);
     const { data: races, isLoading, error } = useQuery({
         queryKey: ["races"],
         queryFn: getProducts,
     });
+    const itemsPerPage = 20;
 
     if (isLoading)
         return (
@@ -23,8 +26,15 @@ const UpComingRaces = () => {
             </div>
         );
 
+    const handlePageChange = (page) => {
+        setCurrentPage(page);
+    };
 
-    // ✅ Fix: Ensure `races.record` exists before filtering
+    const handleSearch = (e) => {
+        setQuery(e.target.value);
+        setCurrentPage(1); // Reset to first page when searching
+    };
+
     const filteredData =
         races?.filter(
             (item) =>
@@ -32,6 +42,10 @@ const UpComingRaces = () => {
                 item.club_name.toLowerCase().includes(query.toLowerCase()) ||
                 item.ring_no.toString().includes(query)
         ) || [];
+
+    const totalItems = filteredData.length; // Ensure totalItems reflects filtered results
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const currentItems = filteredData.slice(startIndex, startIndex + itemsPerPage);
 
     return (
         <div className="min-h-screen p-8 sm:p-16 bg-[#AC8D68] pt-32">
@@ -42,7 +56,7 @@ const UpComingRaces = () => {
                         type="text"
                         placeholder="Search by name, club, or ring number..."
                         value={query}
-                        onChange={(e) => setQuery(e.target.value)}
+                        onChange={handleSearch}
                         className="border outline-none border-black rounded-lg p-2 w-full sm:w-80"
                     />
                 </div>
@@ -61,8 +75,8 @@ const UpComingRaces = () => {
                             </tr>
                         </thead>
                         <tbody className="border-b bg-gray-50 border-gray-300">
-                            {filteredData.length > 0 ? (
-                                filteredData.map((race, index) => (
+                            {currentItems.length > 0 ? (
+                                currentItems.map((race, index) => (
                                     <tr key={race._id || index} className="text-center text-sm sm:text-base">
                                         <td className="px-2 sm:px-3 text-lg font-medium text-gray-600">{race.rank || "N/A"}</td>
                                         <td className="px-2 sm:px-3 py-2">{race.name || "N/A"}</td>
@@ -85,6 +99,7 @@ const UpComingRaces = () => {
                     </table>
                 </div>
             </div>
+            <Pagination totalItems={totalItems} itemsPerPage={itemsPerPage} onPageChange={handlePageChange} />
         </div>
     );
 };
